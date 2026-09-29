@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-serif: var(--font-display);
+  --font-script: var(--font-great-vibes);
+  --font-sans: var(--font-jost);
+}
+
+@theme {
+  --color-ivory: #f7f4ee;
+  --color-paper: #fcfaf5;
+  --color-ink: #33423a;
+  --color-ink-soft: #66736b;
+  --color-forest: #1f4636;
+  --color-forest-deep: #153326;
+  --color-gold: #b08d57;
+  --color-gold-soft: #d8c4a0;
+  --color-sage: #dde4d6;
+  --color-sage-deep: #c5cfbb;
+  --color-leaf: #a3b096;
+
+  --animate-marquee: marquee var(--marquee-duration, 45s) linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translate3d(0, 0, 0);
+    }
+    to {
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
+}
+
+html {
+  background: var(--color-ivory);
+}
+
+body {
+  background:
+    radial-gradient(ellipse at top, #fbf9f4 0%, transparent 60%),
+    var(--color-ivory);
+  color: var(--color-ink);
+  font-variant-numeric: lining-nums;
+}
+
+::selection {
+  background: var(--color-sage);
+  color: var(--color-forest-deep);
+}
